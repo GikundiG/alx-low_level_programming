@@ -1,17 +1,20 @@
-#include <limits.h>
 #include "main.h"
-
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_last_digit - function that computes the absolute value of an integer
+ * @c:  is the int that will use for the argument of the function
+ * Return: 0
  */
-int main(void)
+int print_last_digit(int c)
 {
-	int r;
-
-	r = print_last_digit(INT_MIN);
-	_putchar('0' + r);
-	_putchar('\n');
-	return (0);
+	if (c > 0 || c == 0)
+	{
+	_putchar (c % 10 + '0');
+	return (c % 10);
+	}
+	else
+	{
+	c = c * -1;
+	_putchar (c % 10 + '0');
+	return (c % 10);
+	}
 }
