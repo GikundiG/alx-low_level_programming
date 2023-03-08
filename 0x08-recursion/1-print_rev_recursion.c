@@ -1,16 +1,15 @@
 #include "main.h"
 
 /**
- * main - check the code
- * 
- * Return: Always 0.
+ * _print_rev_recursion -> reverses a string
+ * @x: argument string
+ *
  */
-void _puts_recursion(char *s)
+void _print_rev_recursion(char *x)
 {
-	if(*s == '\0'){
-		putchar('\n');
-		return;
-	}
-	putchar(*s);
-	_puts_recursion(s + 1);
+if (*x)
+{
+_print_rev_recursion(x +1);
+_putchar(*x);
+}
 }
