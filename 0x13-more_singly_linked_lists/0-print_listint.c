@@ -14,10 +14,12 @@ size_t print_listint(const listint_t *h)
 {
 	size_t nodes = 0;
 
-	/* Traverse the list untill we reach the end */
-	for (; h != NULL; h = h->next, count++)
+	while (h)
+
 	{
-		print("%d\n", h->n);
+		printf("%d\n", h->n);
+		h = h->next;
+		nodes++;
 	}
 
 	return (nodes);
