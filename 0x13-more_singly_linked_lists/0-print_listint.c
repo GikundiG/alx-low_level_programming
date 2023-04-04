@@ -2,28 +2,21 @@
 #include "lists.h"
 
 /**
- * struct listint_s -singly linked list
- * @h: integer
- * @next: points to the next node
- *
- * Description: singly linked list node structure
- *
- */
-
+* print_listint - Prints all the elements of a listint_t list.
+* @h: Pointer to the start of the list.
+*
+* Return: Number of nodes in the list.
+*/
 size_t print_listint(const listint_t *h)
 {
-	size_t nodes = 0;
-
-	/* Traverse the linked list while the current node is not Null */
+	size_t node_size = 0; /* Variable to keep track of number of nodes */
 
 	while (h)
-
 	{
-		nodes++;
-		printf("%d\n", h->n);
-		h = h->next;
-
+		printf("%d\n", h->n); /* Print the value of the current node */
+		node_size++; /* Increment the node size counter */
+		h = h->next; /* Move to the next node */
 	}
 
-	return (nodes);
+	return (node_size); /* Return the number of nodes in the list */
 }
